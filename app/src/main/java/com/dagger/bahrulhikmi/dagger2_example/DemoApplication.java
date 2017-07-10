@@ -4,14 +4,16 @@ import android.app.Application;
 import android.content.Context;
 
 import com.dagger.bahrulhikmi.dagger2_example.data.DataManager;
+import com.dagger.bahrulhikmi.dagger2_example.di.ApplicationComponent;
+import com.dagger.bahrulhikmi.dagger2_example.di.ApplicationModule;
+import com.dagger.bahrulhikmi.dagger2_example.di.DaggerApplicationComponent;
 
 import javax.inject.Inject;
 
-/**
- * Created by bar on 09/07/2017.
- */
 
 public class DemoApplication extends Application {
+
+    protected ApplicationComponent applicationComponent;
 
     @Inject
     DataManager mDataManager;
@@ -28,6 +30,7 @@ public class DemoApplication extends Application {
                 .applicationModule(new ApplicationModule(this))
                 .build();
         applicationComponent.inject(this);
+
     }
 
     public ApplicationComponent getComponent(){

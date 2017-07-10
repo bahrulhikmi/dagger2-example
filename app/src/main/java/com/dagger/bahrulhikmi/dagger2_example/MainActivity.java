@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     @Inject
     DataManager mDataManager;
 
-    private ActivityComponent activityComponent;
+    /*private ActivityComponent activityComponent;
 
     private TextView mTvUserInfo;
     private TextView mTvAccessToken;
@@ -65,5 +65,5 @@ public class MainActivity extends AppCompatActivity {
             User user = mDataManager.getUser(1L);
             mTvUserInfo.setText(user.toString());
         }catch (Exception e){e.printStackTrace();}
-    }
+    }*/
 }
