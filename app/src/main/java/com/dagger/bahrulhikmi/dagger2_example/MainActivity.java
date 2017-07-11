@@ -7,6 +7,9 @@ import android.widget.TextView;
 
 import com.dagger.bahrulhikmi.dagger2_example.data.DataManager;
 import com.dagger.bahrulhikmi.dagger2_example.data.model.User;
+import com.dagger.bahrulhikmi.dagger2_example.di.ActivityComponent;
+import com.dagger.bahrulhikmi.dagger2_example.di.ActivityModule;
+import com.dagger.bahrulhikmi.dagger2_example.di.DaggerActivityComponent;
 
 import javax.inject.Inject;
 
@@ -15,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     @Inject
     DataManager mDataManager;
 
-    /*private ActivityComponent activityComponent;
+    private ActivityComponent activityComponent;
 
     private TextView mTvUserInfo;
     private TextView mTvAccessToken;
@@ -65,5 +68,5 @@ public class MainActivity extends AppCompatActivity {
             User user = mDataManager.getUser(1L);
             mTvUserInfo.setText(user.toString());
         }catch (Exception e){e.printStackTrace();}
-    }*/
+    }
 }
